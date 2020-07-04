@@ -8,6 +8,7 @@ client = boto3.resource(
             'ec2',
             aws_access_key_id=Config.ACCESS_KEY,
             aws_secret_access_key=Config.SECRET_KEY,
+            aws_session_token=Config.SESSION_TOKEN,
             region_name=Config.ec2_region
         )
 response = client.create_instances(ImageId = Config.ec2_amis[0],
